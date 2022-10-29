@@ -88,7 +88,9 @@ echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
 **Testing**
+
 ![soal1](https://github.com/anisahfrh/Screenshot_Jarkom/raw/main/Modul2/soal1.jpg)
+
 
 
 ## Soal 2
@@ -124,7 +126,9 @@ Pada file konfigurasi diatas kami mengatur domain menjadi wise.ita06.com yang me
 Terakhir, kami menambahkan `nameserver 192.212.1.2` ke dalam file `/etc/resolv.conf` pada node client **SSS** dan **Garden**
 
 **Testing**
+
 ![soal2](https://github.com/anisahfrh/Screenshot_Jarkom/raw/main/Modul2/soal2.jpg)
+
 
 
 ## Soal 3
@@ -153,7 +157,9 @@ www.eden        IN      CNAME   eden.wise.ita06.com.
 Pada file konfigurasi diatas kami menambahkan subdomain eden yang mengarah ke Eden dan membuat CNAME `www.eden` sebagai alias dari `eden.wise.ita06.com`
 
 **Testing**
+
 ![soal3](https://github.com/anisahfrh/Screenshot_Jarkom/raw/main/Modul2/soal3.jpg)
+
 
 
 ## Soal 4
@@ -186,7 +192,9 @@ $TTL    604800
 IP Address dari WISE adalah **192.212.1**.2, sehingga untuk reverse domainnya adalah **1.212.192**.in-addr.arpa
 
 **Testing**
+
 ![soal4](https://github.com/anisahfrh/Screenshot_Jarkom/raw/main/Modul2/soal4.jpg)
+
 
 
 ## Soal 5
@@ -194,6 +202,7 @@ Agar dapat tetap dihubungi jika server WISE bermasalah, buatlah juga Berlint seb
 
 ### Penyelesaian soal 5
 Untuk menjadikan Berlint sebagai DNS Slave, pada WISE, kami menambahkan konfigurasi `notify yes`, `also-notify { 192.217.2.3; }` serta `allow-transfer { 192.217.2.3; };` dalam file `/etc/bind/named.conf.local`, sehingga menjadi sebagai berikut
+
 
 **WISE**
 ```
@@ -213,6 +222,7 @@ zone "1.212.192.in-addr.arpa" {
 
 Pada Berlint, dilakukan konfigurasi pada file `/etc/bind/named.conf.local` sebagai berikut
 
+
 **Berlint**
 ```
 zone "wise.ita06.com" {
@@ -225,8 +235,10 @@ zone "wise.ita06.com" {
 Terakhir, kami menambahkan `nameserver 192.212.3.2` ke dalam file `/etc/resolv.conf` pada node client **SSS** dan **Garden**
 
 **Testing**
+
 Kami mematikan service bind9 pada WISE dan menjalankan service bind9 pada Berlint
 ![soal5](https://github.com/anisahfrh/Screenshot_Jarkom/raw/main/Modul2/soal5.jpg)
+
 
 
 ## Soal 6
@@ -234,6 +246,7 @@ Karena banyak informasi dari Handler, buatlah subdomain yang khusus untuk operat
 
 ### Penyelesaian soal 6
 Pada WISE, kami melakukan konfigurasi pada `/etc/bind/wise/wise.ita06.com` sebagai berikut. Kami mendelegasikan NS1 dan subdomain operation ke alamat Berlint
+
 
 **WISE**
 ```
@@ -282,6 +295,7 @@ options {
         listen-on-v6 { any; };
 };
 ```
+
 
 Pada Berlint, kami melakukan konfigurasi pada file `/etc/bind/named.conf.local`sebagai berikut. Kami menambahkan zone untuk alamat operation.wise.ita06.com dengan type master dan folder konfigurasi nya terdapat pada folder operation
 
@@ -337,6 +351,7 @@ www             IN      CNAME   operation.wise.ita06.com.
 Pada file konfigurasi diatas kami mengatur domain operation.wise.ita06.com untuk mengarah ke Eden pada 192.212.3.3 dan membuat CNAME `www` sebagai alias dari `operation.wise.ita06.com`
 
 **Testing**
+
 ![soal6](https://github.com/anisahfrh/Screenshot_Jarkom/raw/main/Modul2/soal6.jpg)
 
 

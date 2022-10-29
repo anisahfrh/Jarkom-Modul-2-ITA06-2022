@@ -399,8 +399,7 @@ Sehingga DocumentRoot dari subdomain www.wise.yyy.com akan terletak di `/var/www
 
 Jika di lynx dari SSS maka akan menampilkan isi dari /var/www/wise.ita06.com.
 
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156b05.PNG)
-
+![testing9](https://user-images.githubusercontent.com/76768695/198837035-236e47c2-0b56-448c-8eb0-7258ddd942b6.jpeg)
 
 ## Soal 9
 Setelah itu, Loid juga membutuhkan agar url www.wise.yyy.com/index.php/home dapat menjadi www.wise.yyy.com/home 
@@ -411,6 +410,8 @@ Di dalam `/etc/apache2/sites-available/wise.ita06.com.conf` kami menambahkan syn
 **Testing**
 
 Berikut merupakan tampilan jika kita membuka url www.wise.ita06.com/home yang isinya sama seperti soal 8
+
+![testing9](https://user-images.githubusercontent.com/76768695/198837035-236e47c2-0b56-448c-8eb0-7258ddd942b6.jpeg)
 
 
 ## Soal 10
@@ -432,9 +433,10 @@ Sehingga DocumentRoot dari subdomain www.eden.wise.ita06.com akan terletak di  `
 
 **Testing**
 
-Jika kita lynx ke www.eden.wise.ita06.com maka akan menampilkan isi dari  /var/www/eden.wise.ita06.com dan bisa dilihat juga bahwa isi dari domain tersebut adalah public yang berisikan asset
+Jika kita lynx ke www.eden.wise.ita06.com maka akan menampilkan isi dari  /var/www/eden.wise.ita06.com 
 
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+![testing10](https://user-images.githubusercontent.com/76768695/198837617-77ad75b8-b2ab-461c-99af-e221aff44c5c.jpeg)
+
 
 ## Soal 11
 Akan tetapi, pada folder /public, Loid ingin hanya dapat melakukan directory listing saja
@@ -451,7 +453,7 @@ Di Eden, kami menambahkan konfigurasi pada `/etc/apache2/sites-available/eden.wi
 
 Bisa dilihat jika kita me-lynx ke www.eden.wise.ita06.com maka akan menampilkan directory listing
 
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+![testing11](https://user-images.githubusercontent.com/76768695/198837627-ae37b67c-c5d3-439a-86b2-5d67b176645e.jpeg)
 
 ## Soal 12
 Tidak hanya itu, Loid juga ingin menyiapkan error file 404.html pada folder /error untuk mengganti error kode pada apache 
@@ -477,7 +479,7 @@ lynx eden.wise.ita06.com/abcd
  
 Maka hasilnya akan seperti ini
 
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+![testing12](https://user-images.githubusercontent.com/76768695/198837633-8d6a55ab-4c4f-43c8-a98b-a4142b0ae0a7.jpeg)
 
  
 ## Soal 13
@@ -497,10 +499,13 @@ Fungsi `alias` akan menerjemahkan direkori web `/js` menjadi `/public/js`
 **Testing**
 
 Selanjutnya melakukan lynx pada SSS dan Garden untuk melihat isi dari www.eden.wise.ita06.com/js 
-lynx eden.wise.ita06.com/js 
+`lynx eden.wise.ita06.com/js`
  
 Maka hasilnya akan seperti ini
- 
+
+![testing13](https://user-images.githubusercontent.com/76768695/198837641-c6f51ef7-52a5-42e5-862d-e69bfa0e264b.jpeg)
+
+
 ## Soal 14
 Loid meminta agar www.strix.operation.wise.yyy.com hanya bisa diakses dengan port 15000 dan port 15500
 
@@ -547,7 +552,7 @@ lynx strix.operation.wise.ita06.com:15500
 
 Maka tampilannya akan seperti berikut
 
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+![testing14](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
 
 
 ## Soal 15
@@ -566,11 +571,9 @@ untuk mengatur basic authentication yang tersimpan di file `/var/www/strix.opera
 Selanjutnya melakukan lynx untuk testing
 `lynx strix.operation.wise.ita06.com:15000`
  
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+Kemudian kita akan diminta memasukkan username dan password:
 
-Kemudian kita akan diminta memasukkan username dan password, jika benar maka tampilannya seperti berikut:
-
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+![testing15b](https://user-images.githubusercontent.com/76768695/198837959-ef7b7925-44ba-403b-b304-7ff5fe92ac4c.jpeg)
  
 ## Soal 16
 dan setiap kali mengakses IP Eden akan dialihkan secara otomatis ke www.wise.yyy.com
@@ -603,7 +606,7 @@ lynx 192.212.3.3
 ```
 Maka akan langsung dialihkan ke web www.wise.it06.com
 
-![testing88](https://user-images.githubusercontent.com/76768695/198831285-dde48316-1b16-43e8-9e06-175d9156bc0.PNG)
+![testing16b](https://user-images.githubusercontent.com/76768695/198837967-cd15958a-6880-4d1e-b463-e217e2e9e365.jpeg)
  
 ## Soal 17
 Karena website www.eden.wise.yyy.com semakin banyak pengunjung dan banyak modifikasi sehingga banyak gambar-gambar yang random, maka Loid ingin mengubah request gambar yang memiliki substring “eden” akan diarahkan menuju eden.png. Bantulah Agent Twilight dan Organisasi WISE menjaga perdamaian! 
@@ -620,7 +623,9 @@ yang berisi jika apapun yang memiliki string “eden” maka akan diarahkan menu
 
 **Testing**
 
+Kemudian kami mengecek dengan perintah `lynx eden.wise.ita06.com/bedenning.png`
 
+![testing171](https://user-images.githubusercontent.com/76768695/198837046-1fe6a725-006e-41bc-a1a1-87edb7b1eb15.jpg)
 
 
 ## Kendala Pengerjaan

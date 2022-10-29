@@ -435,8 +435,7 @@ Sehingga DocumentRoot dari subdomain www.eden.wise.ita06.com akan terletak di  `
 
 Jika kita lynx ke www.eden.wise.ita06.com maka akan menampilkan isi dari  /var/www/eden.wise.ita06.com 
 
-![testing10](https://user-images.githubusercontent.com/76768695/198837617-77ad75b8-b2ab-461c-99af-e221aff44c5c.jpeg)
-
+![testing10](https://user-images.githubusercontent.com/76768695/198840968-01467b2c-6b2c-4f98-a80a-70f2a3f83eeb.jpeg)
 
 ## Soal 11
 Akan tetapi, pada folder /public, Loid ingin hanya dapat melakukan directory listing saja
@@ -453,7 +452,7 @@ Di Eden, kami menambahkan konfigurasi pada `/etc/apache2/sites-available/eden.wi
 
 Bisa dilihat jika kita me-lynx ke www.eden.wise.ita06.com maka akan menampilkan directory listing
 
-![testing11](https://user-images.githubusercontent.com/76768695/198837627-ae37b67c-c5d3-439a-86b2-5d67b176645e.jpeg)
+![testing11](https://user-images.githubusercontent.com/76768695/198840966-353f1772-0c65-48b4-b4b7-117fa4a726c5.jpeg)
 
 ## Soal 12
 Tidak hanya itu, Loid juga ingin menyiapkan error file 404.html pada folder /error untuk mengganti error kode pada apache 
@@ -503,7 +502,7 @@ Selanjutnya melakukan lynx pada SSS dan Garden untuk melihat isi dari www.eden.w
  
 Maka hasilnya akan seperti ini
 
-![testing13](https://user-images.githubusercontent.com/76768695/198837641-c6f51ef7-52a5-42e5-862d-e69bfa0e264b.jpeg)
+![testing13](https://user-images.githubusercontent.com/76768695/198840961-11ffc53a-a14c-4ed0-a203-fea60f7cd525.jpeg)
 
 
 ## Soal 14
